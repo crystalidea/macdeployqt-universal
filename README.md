@@ -1,6 +1,6 @@
 With Apple transition from Intel to Apple Silicon (arm64) CPUs, developers have to deal with Universal binaries in macOS (again) in order to support the app smoothly running on both architectures. For Qt developers things get much more complicated because we have to take care of signing, notarization and Universal binaries creation without using XCode.
 
-As you might now, [Macs Fan Control](https://crystalidea.com/macs-fan-control) is written using C++ and Qt to support both macOS & Windows. This article explains how we at CrystalIDEA are currently deploying macOS version of the app. We hope that it can be useful for other indie developers and the Qt development community: let's hope that Qt Creator will simplify things in future.
+This article explains how we at CrystalIDEA are currently deploying macOS version of [our apps](https://crystalidea.com/macs-fan-control). We hope that it can be useful for other indie developers and the Qt development community: let's hope that Qt Creator will simplify things in future.
 
 The build process takes place on Intel machine using Qt 5.15.2 (migrating to Qt 6 is not possible for us because it doesn't support macOS 10.13 and Windows 7). 
 
