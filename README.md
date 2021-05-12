@@ -2,13 +2,13 @@ With Apple transition from Intel to Apple Silicon (arm64) CPUs, developers have 
 
 This article explains how we at CrystalIDEA are currently deploying macOS versions of [our apps](https://crystalidea.com/). We hope that it can be useful for other indie developers and the Qt development community. Let's also hope that Qt Creator will simplify things in future ([QTBUG-85279](https://bugreports.qt.io/browse/QTBUG-85279)).
 
-The build process takes place on Intel machine using Qt 5.15.2 (migrating to Qt 6 is not possible for us because it doesn't support macOS 10.13 and Windows 7). Currently we're using macOS 10.15 (Catalina) and XCode 11.
+The build process takes place on Intel machine using Qt 5.15.2 (migrating to Qt 6 is not possible for us because it doesn't support macOS 10.13 and Windows 7). Currently we're using macOS 10.15.7 (Catalina) and XCode 12.4.
 
 **Disclaimer**: the described process is unlikely to be optimal, any improvement ideas and comments are welcome.
 
 ## Prerequisites
 
-- Qt built for x86_64. It's installed by default to /usr/local/Qt-5.15.2
+- Qt built for x86_64. It's installed (by default) to /usr/local/Qt-5.15.2
 - Qt built for arm64 using the `QMAKE_APPLE_DEVICE_ARCHS=arm64` configure switch and `-prefix /usr/local/Qt-5.15.2-arm` to install it to /usr/local/Qt-5.15.2-arm
 - our modified version of [macdeployqt](macdeployqt_src) with support of the `-qtdir` switch that speficies actual Qt directory. You can compile it yourself but easier is to download the [precompiled binary](bin/macdeployqt) (it has no dependencies as Qt is statically linked)
 - [makeuniversal](https://github.com/nedrysoft/makeuniversal) tool. This tool merges two folders with  x86_64 and arm64 binaries into a universal binary. [Precompiled binary](bin/makeuniversal) with zero dependencies
