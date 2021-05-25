@@ -10,9 +10,9 @@ The build process takes place on Intel machine using Qt 5.15.2 (migrating to Qt 
 
 - Qt built for x86_64. It's installed (by default) to /usr/local/Qt-5.15.2
 - Qt built for arm64 using the `QMAKE_APPLE_DEVICE_ARCHS=arm64` configure switch and `-prefix /usr/local/Qt-5.15.2-arm` to install it to /usr/local/Qt-5.15.2-arm
-- our modified version of [macdeployqt](macdeployqt_src) with support of the `-qtdir` switch that speficies actual Qt directory. You can compile it yourself but easier is to download the [precompiled binary](bin/macdeployqt) (it has no dependencies as Qt is statically linked)
-- [makeuniversal](https://github.com/nedrysoft/makeuniversal) tool. This tool merges two folders with  x86_64 and arm64 binaries into a universal binary. [Precompiled binary](bin/makeuniversal) with zero dependencies
-- A tool to notarize macOS apps. We recommended [xcnotary](https://github.com/akeru-inc/xcnotary) which is also available as a [precompiled binary](bin/xcnotary)
+- Our modified version of [macdeployqt](macdeployqt_src) with support of the `-qtdir` switch that speficies actual Qt directory. You can compile it yourself or download our [precompiled binary](bin/macdeployqt) (it has no dependencies as Qt is statically linked)
+- [makeuniversal](https://github.com/nedrysoft/makeuniversal) tool which merges two folders with  x86_64 and arm64 binaries of your app into a universal binary. Here we also provice the [precompiled binary](bin/makeuniversal) with zero dependencies
+- A tool to notarize macOS apps. We do recommended [xcnotary](https://github.com/akeru-inc/xcnotary) which is also available as a [precompiled binary](https://github.com/akeru-inc/xcnotary/releases/latest)
 
 ## Build steps
 
