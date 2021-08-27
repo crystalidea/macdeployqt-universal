@@ -2,7 +2,7 @@ With Apple transition from Intel to Apple Silicon (arm64) CPUs, developers have 
 
 This article explains how we at CrystalIDEA are currently deploying macOS versions of [our apps](https://crystalidea.com/). We hope that it can be useful for other indie developers who are still on Qt 5.15 LTS for various reasons (e.g. Windows 7 & macOS 10.13 support). Qt started supporting universal builds in Qt 6.2, let's hope it will be back-ported to 5.15 LTS. [QTBUG-85279](https://bugreports.qt.io/browse/QTBUG-85279)
 
-The build process takes place on Intel machine using Qt 5.15.2. Currently we're using macOS 10.15.7 (Catalina) and XCode 12.4.
+The build process takes place on Intel machine: currently we're using macOS 10.15.7 (Catalina) and XCode 12.4. You can still use the latest available Qt 5.15.2 with some custom [macOS-related patches](https://github.com/crystalidea/qt-build-tools/tree/master/5.15.2) applied. If you own a commercial license it's better to use the latest 5.15.5 where all those issues and many others were fixed.
 
 **Disclaimer**: the described process is unlikely to be optimal, any improvement ideas and comments are welcome.
 
