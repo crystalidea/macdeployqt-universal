@@ -1,8 +1,8 @@
 With Apple transition from Intel to Apple Silicon (arm64) CPUs, developers have to deal with Universal binaries in macOS (again) in order to support their apps running smoothly on both architectures. For Qt developers things get much more complicated because we have to take care of signing, notarization and Universal binaries creation without using XCode.
 
-This article explains how we at CrystalIDEA are currently deploying macOS versions of [our apps](https://crystalidea.com/). We hope that it can be useful for other indie developers and the Qt development community. Let's also hope that Qt Creator will simplify things in future ([QTBUG-85279](https://bugreports.qt.io/browse/QTBUG-85279)).
+This article explains how we at CrystalIDEA are currently deploying macOS versions of [our apps](https://crystalidea.com/). We hope that it can be useful for other indie developers who are still on Qt 5.15 LTS for various reasons (e.g. Windows 7 & macOS 10.13 support). Qt started supporting universal builds in Qt 6.2, let's hope it will be back-ported to 5.15 LTS. [QTBUG-85279](https://bugreports.qt.io/browse/QTBUG-85279)
 
-The build process takes place on Intel machine using Qt 5.15.2 (migrating to Qt 6 is not possible for us because it doesn't support macOS 10.13 and Windows 7). Currently we're using macOS 10.15.7 (Catalina) and XCode 12.4.
+The build process takes place on Intel machine using Qt 5.15.2. Currently we're using macOS 10.15.7 (Catalina) and XCode 12.4.
 
 **Disclaimer**: the described process is unlikely to be optimal, any improvement ideas and comments are welcome.
 
