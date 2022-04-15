@@ -1,8 +1,12 @@
+# Deploying macOS universal binaries using Qt 5.15.2
+
 With Apple transition from Intel to Apple Silicon (arm64) CPUs, developers have to deal with Universal binaries in macOS (again) in order to support their apps running smoothly on both architectures. For Qt developers things get much more complicated because we have to take care of signing, notarization and Universal binaries creation without using XCode.
 
-This article explains how we at CrystalIDEA are currently deploying macOS versions of [our apps](https://crystalidea.com/). We hope that it can be useful for other indie developers who are still on Qt 5.15 LTS for various reasons (e.g. Windows 7 & macOS 10.13 support). Qt started supporting universal builds in Qt 6.2, let's hope it will be back-ported to 5.15 LTS. [QTBUG-85279](https://bugreports.qt.io/browse/QTBUG-85279)
+This article explains how we at CrystalIDEA used to deploy macOS versions of [our apps](https://crystalidea.com/) (before official support of universal builds in Qt). We hope that it can be useful for other indie developers who are still on Qt 5.15.2 for various reasons (e.g. Windows 7 & macOS 10.13 support). Qt started supporting universal builds in Qt 5.15.9, so if you own a commercial license, this article is NOT for you. Qt 6.2 and later also have macOS universal binaries support. 
 
-The build process takes place on Intel machine running macOS 10.15 (Catalina) or 11 (Big Sur), Qt Creator 5/6 and XCode 12/13. You can still use the latest available Qt 5.15.2 with some custom [macOS-related patches](https://github.com/crystalidea/qt-build-tools/tree/master/5.15.2) applied. If you own a commercial license please use the latest 5.15.7 where all those issues and many others were fixed.
+The build process takes place on Intel machine running macOS 10.15 (Catalina) or 11 (Big Sur), Qt Creator 5/6 and XCode 12/13. 
+
+You can use our [Qt 5.15.2](https://github.com/crystalidea/qt-build-tools/tree/master/5.15.2) with some custom macOS-related patches applied.
 
 **Disclaimer**: the described process is unlikely to be optimal, any improvement ideas and comments are welcome.
 
