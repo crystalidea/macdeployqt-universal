@@ -1,8 +1,10 @@
-# Deploying macOS universal binaries using Qt 5.15.8
+# Update: the tutorial is outdated 
 
-- If you own a commercial license, this tutorial is not for you because Qt started supporting universal builds since Qt 5.15.9. Qt 6.2 and later also have macOS universal binaries support
-- Qt 5.15.8 source code is officially available [here](https://download.qt.io/official_releases/qt/5.15/5.15.8/)
-- Qt 5.15.9 will be publicly released [April 05, 2023](https://crystalidea.com/blog/qt-5-15-lts-commercial-source-code)
+Qt Group open sourced [Qt 5.15.9](https://download.qt.io/official_releases/qt/5.15/5.15.9/) with macOS universal binaries support.
+
+If you're still interested for some reason, proceed reading.
+
+# Deploying macOS universal binaries using Qt 5.15.8
 
 With Apple transition from Intel to Apple Silicon (arm64) CPUs, developers have to deal with Universal binaries in macOS (again) in order to support their apps running smoothly on both architectures. For Qt developers things get much more complicated because we have to take care of signing, notarization and Universal binaries creation without using XCode.
 
